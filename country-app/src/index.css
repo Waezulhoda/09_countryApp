@@ -13,3 +13,17 @@
 .width{
     width: 260px;
 }
+
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 95vw;
+    font-weight: 900;
+    font-size: 40px;
+}
+.full-screen{
+    width: 98vw;
+    height: 86vh;
+}

@@ -6,6 +6,15 @@ const ThemeContext=createContext();
 function ThemeProvider({children}) {
   const [theme,setTheme]=useState('light')
 
+  useEffect(() => {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark');
+    }
+    else {
+      setTheme('light');
+    }
+  }, [])
+
   useEffect(()=>{
     if(theme==="dark"){
       document.documentElement.classList.add('dark')

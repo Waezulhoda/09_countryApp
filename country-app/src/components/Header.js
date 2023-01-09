@@ -20,13 +20,13 @@ export default function Header() {
       <Container className="px-4 py-8">
         <div className="flex justify-between">
           <Link to={"/"}>
-            <h1 className="  font-black text-2xl prevent-select">
+            <h1 className="  font-black text-xl prevent-select">
               Where in the world?
             </h1>
           </Link>
 
           <div
-            className="flex text-xl cursor-pointer"
+            className="flex text-md cursor-pointer"
             onClick={handleThemeSwitch}
           >
             {icon}
