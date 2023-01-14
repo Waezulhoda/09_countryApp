@@ -19,7 +19,6 @@ export default function SingleCountry() {
         .then(res=>res.json())
         .then(data=>setSingleCountry(data))
     },[])
-    // console.log(singleCountry[0]);
   if(isRender){
     var {region,population,name,flags,capital,subregion,tld,currencies,languages,maps,borders}=singleCountry[0]
     var flag=flags.svg
@@ -33,11 +32,6 @@ export default function SingleCountry() {
     .then(data=>console.log(data))
   },[])
 
-  if(borders){
-    borders.map(()=>{
-      return 'waez'
-    })
-  }
 
 
   return (
@@ -78,7 +72,6 @@ export default function SingleCountry() {
               <div className=" flex gap-x-2 gap-y-6 flex-wrap mt-10 ">
                 {borders ? borders.map(x => {
                     return allCountry.map(({ cca2, cca3, ccn3, cioc, name }) => {
-                        // console.log(cca2, cca3, ccn3, cioc, name)
                         if (cca2 === x || cca3 === x || ccn3 === x || cioc === x) {
                             return <Link className=' basis-46 text-center px-8 py-3 shadow-2xl text-base font-medium dark:bg-secondary_dark ' to={`/country-details/${name.common}`} key={name.common} >{name.common}</Link>;
                         }
@@ -87,11 +80,7 @@ export default function SingleCountry() {
               </div>
             </div>
           </div>
-          
-          
-        </div>
-
-        
+        </div> 
       </Container>
       : <Preloader/>}
     </div>

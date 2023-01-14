@@ -17,14 +17,8 @@ function CountryDataProvider({ children }) {
     });
   }
 
-  // if(allCountry.length==0){
-  //   console.log(allCountry.length);
-  //   setLoading(prev=>!prev)
-    // console.log(isLoading);
-  // }
 
   useEffect(() => {
-    // console.log('hi from useEffect');
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((data) => setAllCountry(sortedCountries(data)))

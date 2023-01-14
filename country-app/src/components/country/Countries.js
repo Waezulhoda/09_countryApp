@@ -5,7 +5,6 @@ import { CountryDataContext } from '../../context/CountryDataProvider'
 
 export default function Countries() {
   const {allCountry}=useContext(CountryDataContext)
-  // console.log('hi from Counties-component');
   const countries=allCountry.map((country,i)=>{
     return (
       <Country key={i} country={country}/>
