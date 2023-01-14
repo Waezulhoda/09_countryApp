@@ -43,8 +43,8 @@ export default function SingleCountry() {
         <Link to={'/'}>
           <button className=' px-8 py-3 mb-10 shadow-lg text-base font-medium dark:bg-secondary_dark'>&#8592;  Back</button>
         </Link>
-        <div className='flex justify-evenly	'>
-          <img className='w-2/5' src={flag} />
+        <div className='flex justify-evenly	' id='temp'>
+          <img className='width2' src={flag}  />
           
           <div className='flex flex-col  w-3/5'>
             
