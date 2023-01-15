@@ -23,7 +23,7 @@ export default function SingleCountry() {
     var {region,population,name,flags,capital,subregion,tld,currencies,languages,maps,borders}=singleCountry[0]
     var flag=flags.svg
     var capitalName= capital?capital[0]:'unknown'
-    console.log(borders);
+    // console.log(borders);
   }
 
   useEffect(()=>{

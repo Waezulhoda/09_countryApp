@@ -28,7 +28,7 @@ function CountryDataProvider({ children }) {
 
   return (
     <CountryDataContext.Provider
-      value={{allCountry,isLoading}}
+      value={{allCountry,isLoading,setAllCountry}}
     >{children}</CountryDataContext.Provider>
   );
 }

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Countries from "./country/Countries";
-
+import React,{useEffect, useContext} from 'react'
+import { CountryDataContext } from "../context/CountryDataProvider";
 const FilterRegions = (props) => {
+  const {allCountry,setAllCountry}=useContext(CountryDataContext)
   const [isVisible, setVisibility] = useState(false);
   const [activeRegion, setActiveRegion] = useState("");
   const regions = [
@@ -24,15 +26,15 @@ const FilterRegions = (props) => {
 
   const fetchRegion = async (regionName) => {
     if (regionName === "all") {
-      const url = `https://restcountries.com/v2/all`;
+      const url = `https://restcountries.com/v3.1/all`;
       const response = await fetch(url);
       const data = await response.json();
-      props.setCountries(data);
+      setAllCountry(data);
     } else {
-      const url = `https://restcountries.com/v2/region/${regionName}`;
+      const url = `https://restcountries.com/v3.1/region/${regionName}`;
       const response = await fetch(url);
       const data = await response.json();
-      props.setCountries(data);
+      setAllCountry(data);
     }
   };
   const addDropdown = () => {
